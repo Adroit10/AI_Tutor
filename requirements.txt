@@ -1,0 +1,26 @@
+faiss-cpu>=1.7.4
+sentence-transformers>=2.6.1
+langchain-community>=0.2.0
+langchain-text-splitters>=0.2.0
+pypdf>=4.0.0
+rank_bm25>=0.2.2          # BM25 keyword search (replaces substring match)
+groq>=0.9.0               # Primary: Llama-3.1-70B free tier at console.groq.com
+openai>=1.30.0            # Used for OpenRouter fallback (same SDK)
+python-dotenv>=1.0.0      # Load API keys from .env file
+requests>=2.31.0          # Kroki.io Mermaid API + HF Inference API
+pillow>=10.0.0            # Image handling
+matplotlib>=3.8.0         # Local fallback diagram renderer
+networkx>=3.2.0           # Graph layout for matplotlib fallback
+
+# ── Fine-tuning (QLoRA) ───────────────────────────────────────────────────
+# Only needed when running finetune.py (best on Colab T4 GPU)
+transformers>=4.41.0
+peft>=0.11.0              # LoRA / QLoRA
+bitsandbytes>=0.43.0      # 4-bit quantisation
+trl>=0.9.0                # SFTTrainer
+datasets>=2.19.0
+accelerate>=0.30.0
+certifi>=2024.0.0
+tqdm>=4.66.0
+numpy>=1.26.0
+torch>=2.2.0              # CPU version; GPU version installed automatically on Colab
